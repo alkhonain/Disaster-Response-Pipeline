@@ -5,6 +5,15 @@ import pandas as pd
 
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    Reading the data and save it in as needed
+
+    INPUT:
+    path, dpath
+
+    OUTBUT:
+    dataframe
+    '''
     print('starting loading\n\n\n')
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
@@ -14,6 +23,15 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    '''
+    cleaning the text from all other staff
+
+    INPUT:
+    dataframe
+
+    OUTBUT:
+    dataframe
+    '''
     print('starting cleaning\n\n\n')
     cat = df['categories'].str.split(';', expand = True)
     row = cat.iloc[0,:]
@@ -32,6 +50,15 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    '''
+    Reading the data and save it in as needed
+
+    INPUT:
+    db, database file
+
+    OUTBUT:
+    none
+    '''
     print('starting saving\n\n\n')
     engine = create_engine('sqlite:///{}'.format(database_filename))
     print('creating engine\n\n\n')

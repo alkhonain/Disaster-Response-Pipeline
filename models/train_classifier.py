@@ -28,6 +28,15 @@ warnings.simplefilter('ignore')
 
 
 def load_data(database_filepath):
+    '''
+    Reading the data and save it in as needed
+
+    INPUT:
+    db, database file
+
+    OUTBUT:
+    X, Y, Ynames
+    '''
     print('Strating Loading\n\n\n\n')
     engine = create_engine('sqlite:///{}'.format(database_filepath))
     df = pd.read_sql("SELECT * FROM df", engine)
@@ -38,6 +47,15 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    '''
+    cleaning the text and stem it
+
+    INPUT:
+    text
+
+    OUTBUT:
+    text
+    '''
     #print('Strating Tokenizing\n\n\n\n')
     text = re.sub(r"[^a-zA-Z]", " ", text.lower()) 
     tokens = word_tokenize(text)
@@ -46,6 +64,15 @@ def tokenize(text):
     return stem
 
 def calculate_score(y_true, y_pred):
+    '''
+    Reading the data and save it in as needed
+
+    INPUT:
+    the real y, predicted y
+
+    OUTBUT:
+    score
+    '''
     print('Strating score\n\n\n\n')
     scores = []
     for i in range(np.shape(y_pred)[1]):
@@ -58,6 +85,15 @@ def calculate_score(y_true, y_pred):
 
 
 def build_model():
+    '''
+    building the model by creating a pipeline
+
+    INPUT:
+    none
+
+    OUTBUT:
+    grid CV
+    '''
     pipeline = Pipeline(
         [
             ('vect', CountVectorizer(tokenizer = tokenize)),
@@ -72,11 +108,20 @@ def build_model():
         'clf__estimator__min_samples_split':[3, 6, 9]
     }
     scorer = make_scorer(calculate_score)
-    grid_CV = GridSearchCV(pipeline, param_grid = parameters,scoring                            
+    grid_CV = GridSearchCV(pipeline, param_grid = parameters,scoring = scorer)                      
     return grid_CV
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    '''
+    Evluate the model by getting the table that contains the evaluation of the model
+
+    INPUT:
+    model, x and y test, name of categories
+
+    OUTBUT:
+    none
+    '''
     print('Strating eval\n\n\n\n')
     y_pred = model.predict(X_test)
     y_true = np.array(Y_test)
@@ -92,6 +137,15 @@ def evaluate_model(model, X_test, Y_test, category_names):
     print('complete eval \n\n\n\n')
 
 def save_model(model, model_filepath):
+    '''
+    saving the model to be used later
+
+    INPUT:
+    model, path
+
+    OUTBUT:
+    none
+    '''
     print('Strating saving \n\n\n\n')
     pickle.dump(model.best_estimator_, open(model_filepath, 'wb'))
     print('complete saving \n\n\n\n')
