@@ -38,16 +38,16 @@ The data files associated with this project are from [here](https://appen.com/da
 ## Folder Structure
 
 - app
-| - template
-| |- master.html # main page of web app
-| |- go.html # classification result page of web app
-|- run.py # Flask file that runs app
+| - template <br>
+| |- master.html # main page of web app <br>
+| |- go.html # classification result page of web app <br>
+|- run.py # Flask file that runs app <br>
 - data
-|- disaster_categories.csv # data to process
-|- disaster_messages.csv # data to process
-|- process_data.py
-|- InsertDatabaseName.db # database to save clean data to
+|- disaster_categories.csv # data to process <br>
+|- disaster_messages.csv # data to process <br>
+|- process_data.py <br>
+|- InsertDatabaseName.db # database to save clean data to <br>
 - models
-|- train_classifier.py
-|- classifier.pkl # saved model
+|- train_classifier.py <br>
+|- classifier.pkl # saved model <br>
 - README.md
