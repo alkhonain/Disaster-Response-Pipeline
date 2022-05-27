@@ -1,15 +1,35 @@
 # Disaster Response Pipeline Project
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+## Intorducation
+Disaster Response Web Application is a Web app that can help emergency organizations analyze incoming messages and classify the messages into specific categories (e.g. Water, Food, Hospitals, Aid-Related) during a disaster event. The data was collected by Figure Eight and provided by Udacity.
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Go to `app` directory: `cd app`
 
-3. Run your web app: `python run.py`
+## Data
 
-4. Click the `PREVIEW` button to open the homepage
+The data files associated with this project are from [here](https://appen.com/datasets-resource-center/)
+
+- messages.csv: FIgure Eight provide 26,248 messages
+- categories.csv: Raw categories data, total 36 categories.
+
+
+## Project Process
+
+### ETL Pipeline
+
+- Loads messages and categories dataset
+- Clean data
+- Feature Engineering
+- Stores it in a SQLite database
+
+###ML Pipeline
+
+- Loads data from the SQLite database
+- text processing and machine learning pipeline
+- Trains and tunes a model using GridSearchCV
+- Exports the model
+
+### Build web app
+
+- Create HTML templates
+- Build Flask web application
