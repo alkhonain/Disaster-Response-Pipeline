@@ -9,7 +9,7 @@ attrs==19.1.0
 audioread==2.1.6
 av==0.3.3
 aws-xray-sdk==0.95
-awscli==1.16.17
+awscli==1.15.85
 Babel==2.9.0
 backcall==0.1.0
 backports.functools-lru-cache==1.4
@@ -20,8 +20,8 @@ bleach==2.1.4
 blinker==1.4
 bokeh==0.12.13
 boto==2.48.0
-boto3==1.9.7
-botocore==1.12.7
+boto3==1.7.84
+botocore==1.10.84
 Box2D==2.3.2
 Box2D-kengz==2.3.3
 bresenham==0.2
