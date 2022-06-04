@@ -1,7 +1,6 @@
 alabaster==0.7.12
 alembic==0.8.10
 altair==1.2.1
-apache-airflow==1.9.0
 appdata==2.1.2
 asn1crypto==0.22.0
 atari-py==0.1.7
@@ -17,7 +16,7 @@ backports.functools-lru-cache==1.4
 backports.weakref==1.0rc1
 bcrypt==3.2.0
 beautifulsoup4==4.6.0
-bleach==2.1.2
+bleach==2.1.4
 blinker==1.4
 bokeh==0.12.13
 boto==2.48.0
@@ -58,8 +57,8 @@ enum34==1.1.10
 et-xmlfile==1.0.1
 eventlet==0.22.0
 fastcache==1.0.2
-Flask==0.11.1
-Flask-Admin==1.4.1
+Flask==0.12.5
+Flask-Admin==1.5.2
 Flask-AppBuilder==1.12.1
 Flask-Babel==0.12.2
 Flask-Bcrypt==0.7.1
