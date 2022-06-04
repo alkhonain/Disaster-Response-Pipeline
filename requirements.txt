@@ -9,7 +9,7 @@ attrs==19.1.0
 audioread==2.1.6
 av==0.3.3
 aws-xray-sdk==0.95
-awscli==1.15.85
+awscli==1.16.0
 Babel==2.9.0
 backcall==0.1.0
 backports.functools-lru-cache==1.4
