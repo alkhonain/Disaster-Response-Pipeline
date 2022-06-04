@@ -1,6 +1,7 @@
 alabaster==0.7.12
 alembic==0.8.10
 altair==1.2.1
+apache-airflow==1.10.2
 appdata==2.1.2
 asn1crypto==0.22.0
 atari-py==0.1.7
@@ -153,7 +154,7 @@ numexpr==2.6.4
 numpy==1.12.1
 oauthlib==2.0.6
 olefile==0.44
-openpyxl==2.5.0b1
+openpyxl==2.6.0
 ordereddict==1.1
 packaging==16.8
 pandas==0.23.3
