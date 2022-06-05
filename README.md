@@ -4,6 +4,18 @@
 Disaster Response Web Application is a Web app that can help emergency organizations analyze incoming messages and classify the messages into specific categories (e.g. Water, Food, Hospitals, Aid-Related) during a disaster event. The data was collected by Figure Eight and provided by Udacity.
 
 
+## Overview
+the images below shows the results of the created dashboard.<br><br>
+
+<br><br><p align="center">
+    <img src="images/main.png" alt="Main page" style="height: 900px; width:400px;"/>
+</p><br><br>
+
+<br><br><p align="center">
+    <img src="images/results.png" alt="Result page" style="height: 800px; width:400px;"/>
+</p><br><br>
+
+
 
 ## Data
 
@@ -22,7 +34,7 @@ The data files associated with this project are from [here](https://appen.com/da
 - Feature Engineering
 - Stores it in a SQLite database
 
-###ML Pipeline
+### ML Pipeline
 
 - Loads data from the SQLite database
 - text processing and machine learning pipeline
