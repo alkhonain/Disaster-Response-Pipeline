@@ -24,13 +24,15 @@ def tokenize(text):
     OUTBUT:
     clean text
     '''
+    # Reading tokens
     tokens = word_tokenize(text)
-    lemmatizer = WordNetLemmatizer()
-
+    
+    # apply the tokinize to the topicks
     clean_tokens = []
     for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
+        clean_tokens.append(tok)
+
+    return clean_tokens
 
     return clean_tokens
 

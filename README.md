@@ -12,7 +12,7 @@ the images below shows the results of the created dashboard.<br><br>
 </p><br><br>
 
 <br><br><p align="center">
-    <img src="images/results.png" alt="Result page" style="height: 800px; width:400px;"/>
+    <img src="images/results.png" alt="Result page" style="height: 900px; width:400px;"/>
 </p><br><br>
 
 
